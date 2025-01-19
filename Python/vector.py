@@ -1,7 +1,14 @@
+import math
+
+
 class Vector:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+    def __init__(self, from_cartesian=True, **kwargs):
+        if from_cartesian:
+            self.x = kwargs.x
+            self.y = kwargs.y
+        else:  # from polar
+            self.x = math.sin(math.radians(kwargs.d)) * kwargs.m
+            self.y = math.cos(math.radians(kwargs.d)) * kwargs.m
 
     def __add__(self, other):
         return Vector(self.x + other.x, self.y + other.y)
