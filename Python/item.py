@@ -23,4 +23,4 @@ class Item:
         return self.id
 
     def __hash__(self):
-        return hash((self.id))
+        return hash(tuple(self.id))
