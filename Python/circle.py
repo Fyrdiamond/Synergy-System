@@ -3,7 +3,6 @@ import vector
 
 class Circle:
     def __init__(self):
-        self.start_coordinates = vector.Vector(0, 0)
         self.coordinates = vector.Vector(0, 0)
         self.radius = 0
         self.items = {}
