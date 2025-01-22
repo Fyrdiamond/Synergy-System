@@ -5,6 +5,9 @@ class Connection:
         self.name = ""
         self.information = ""
 
+    def get_items(self):
+        return self.items
+
     def set_name(self, name):
         self.name = name
 
